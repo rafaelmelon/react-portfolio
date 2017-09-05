@@ -1,22 +1,36 @@
 const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './public/index.html',
-  filename: 'index.html',
-  inject: 'body'
-})
 
 module.exports = {
+  // resolve: {
+  //   extensions: ['', '.js', '.jsx']
+  // },
   entry: './src/index.js',
   output: {
     path: path.resolve('public'),
     filename: 'index_bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
+      }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Proyecto SUIX',
+      template: './public/index.html',
+      filename: 'index.html',
+      inject: 'body'
+    }),
+    new ExtractTextPlugin('app.css')
+  ]
 }
