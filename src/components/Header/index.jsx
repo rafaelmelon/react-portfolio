@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -6,10 +7,18 @@ const Header = () => {
       <img src="" alt="" />
       <nav>
         <ul>
-          <li>Works</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>CV</li>
+          <li>
+            <Link to=''>Works</Link>
+          </li>
+          <li>
+            <Link to=''>About</Link>
+          </li>
+          <li>
+            <Link to=''>Contact</Link>
+          </li>
+          <li>
+            <Link to=''>CV</Link>
+          </li>
         </ul>
       </nav>
     </header>

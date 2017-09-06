@@ -1,13 +1,2 @@
-body {
-  background-color: pink;
-  div {
-    background-color: blue;
-  }
-  .pepe {
-    color: yellow;
-    &.jose {
-      color: red;
-    }
-  }
-
-}
+@import 'main/reset';
+@import 'main/main';
