@@ -5,5 +5,9 @@ body {
   }
   .pepe {
     color: yellow;
+    &.jose {
+      color: red;
+    }
   }
+
 }
