@@ -31,6 +31,6 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new ExtractTextPlugin('app.css')
+    new ExtractTextPlugin('main.css')
   ]
 }
