@@ -15,16 +15,20 @@ class Worklist extends Component {
     fetch(URL).then(res => res.json())
     .then(data => {
       console.log(data.items)
-
       let worksArray = []
       data.items.forEach(item => {
-        let workObject = {
-          id: item.guid.split("/").pop(),
-          title: item.title,
-          image: item.description.split('<img alt="" src="').pop().split('">').shift(),
-          type: item.categories[0],
+        if(item.categories.length > 0){
+          let workObject = {
+            id: item.guid.split("/").pop(),
+            title: item.title,
+            image: item.description.split('<img alt="" src="').pop().split('">').shift(),
+            type: item.categories[0],
+          }
+          worksArray.push(workObject)
+          console.log(worksArray)
+        }else{
+          return;
         }
-        worksArray.push(workObject)
       })
       this.setState({ works: worksArray })
     })
@@ -33,17 +37,17 @@ class Worklist extends Component {
 
   render () {
     return (
-      <div>
+      <section className="b-worklist">
         { this.state.works.map(item =>
-          <article key={item.id}>
+          <Link key={item.id} to={`/${item.id}`} className="item">
             <div>
               <small>{ item.type }</small>
               <h3>{ item.title }</h3>
             </div>
             <img src={ item.image } />
-          </article>
+          </Link>
         ) }
-      </div>
+      </section>
     )
   }
 }
