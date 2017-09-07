@@ -18,11 +18,14 @@ class Work extends Component {
 
   render () {
     return (
-      <section>
-        <h3>WORK</h3>
-        <h4></h4>
-        <p></p>
-        <Link to='/'>Back</Link>
+      <section className="b-work">
+        <div className="container">
+          <div className="row">
+            <h2>Contact</h2>
+            <p>PEPEPE</p>
+            <Link to='/'>Back</Link>
+          </div>
+        </div>
       </section>
     )
   }
