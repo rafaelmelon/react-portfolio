@@ -43,7 +43,7 @@ class Worklist extends Component {
     return (
       <div>
         <Carousel />
-        <section className="b-worklist">
+        <section id="works" className="b-worklist">
           { this.state.works.map(item =>
             <Link key={item.id} to={`/${item.id}`} className="item">
               <div>

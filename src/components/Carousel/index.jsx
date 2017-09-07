@@ -31,7 +31,6 @@ class Carousel extends Component {
 
     return (
       <section className="b-carousel">
-
         <Slider {...settings}>
           { this.state.quotes.map((item) => {
             return <div  key={ item.id }>
@@ -40,7 +39,6 @@ class Carousel extends Component {
             </div>
           }) }
         </Slider>
-
       </section>
     )
   }

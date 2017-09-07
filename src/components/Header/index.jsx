@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Scrollchor from 'react-scrollchor'
 import logo from '../../assets/img/logo.png'
-
-console.log(logo);
 
 const Header = () => {
   return (
@@ -11,19 +9,19 @@ const Header = () => {
       <div className="container">
         <div className="row">
           <div className="four columns">
-            <img src={ logo } alt="" />
+            <img src={ logo } alt="Logo Suix" />
           </div>
           <div className="eight columns">
             <nav>
               <ul>
                 <li>
-                  <Link to=''>Works</Link>
+                  <Scrollchor to='#works'>Works</Scrollchor>
                 </li>
                 <li>
-                  <Link to=''>About</Link>
+                  <Scrollchor to='#about'>About</Scrollchor>
                 </li>
                 <li>
-                  <Link to=''>Contact</Link>
+                  <Scrollchor to='#contact'>Contact</Scrollchor>
                 </li>
                 <li>
                   <Link to=''>CV</Link>
