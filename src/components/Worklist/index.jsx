@@ -18,7 +18,6 @@ class Worklist extends Component {
     fetch(URL)
     .then(res => res.json())
     .then(data => {
-      console.log(data.items)
       let worksArray = []
       data.items.forEach(item => {
         if(item.categories.length > 0){
@@ -29,9 +28,8 @@ class Worklist extends Component {
             type: item.categories[0],
           }
           worksArray.push(workObject)
-          console.log(worksArray)
         }else{
-          return;
+          return
         }
       })
       this.setState({ works: worksArray })
