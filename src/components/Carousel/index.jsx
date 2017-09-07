@@ -1,14 +1,49 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Slider from 'react-slick'
 
-const Carousel = () => {
-  return (
-    <section className="b-carousel">
-      <div>
-        <h1>«Beauty and brains, pleasure and usability should go hand in hand.»</h1>
-        <p>Donald A. Norman  Nielsen Norman Group</p>
-      </div>
-    </section>
-  )
+import dataCarousel from '../../dataCarousel'
+
+class Carousel extends Component {
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      quotes: []
+    }
+  }
+
+  componentWillMount () {
+    this.state.quotes = dataCarousel
+  }
+
+  render () {
+    const settings = {
+      dots: false,
+      arrows: false,
+      autoplay: true,
+      infinite: true,
+      fade: true,
+      speed: 5000,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+
+    return (
+      <section className="b-carousel">
+
+        <Slider {...settings}>
+          { this.state.quotes.map((item) => {
+            return <div  key={ item.id }>
+              <h1>{ item.quote }</h1>
+              <p>{ item.author }</p>
+            </div>
+          }) }
+        </Slider>
+
+      </section>
+    )
+  }
 }
 
 export default Carousel

@@ -1,8 +1,11 @@
-//@import 'main/reset';
+@import 'main/template/normalize';
+@import 'main/template/skeleton';
 
-@import 'main/normalize';
-@import 'main/skeleton';
-@import 'main/color';
+@import 'main/vendor/slider';
+
+@import 'main/helpers/color';
+@import 'main/helpers/fonts';
+
 @import 'main/main';
 
 @import 'components/header';
