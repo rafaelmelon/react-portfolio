@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 
 import Header from '../Header/index.jsx'
-import Carousel from '../Carousel/index.jsx'
-import Worklist from '../Worklist/index.jsx'
-import About from '../About/index.jsx'
+import Main from '../Main/index.jsx'
 import Contact from '../Contact/index.jsx'
 import Footer from '../Footer/index.jsx'
 
@@ -12,9 +10,7 @@ export class App extends Component {
     return (
       <div>
         <Header />
-        <Carousel />
-        <Worklist />
-        <About />
+        <Main />
         <Contact />
         <Footer />
       </div>

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Carousel from '../Carousel/index.jsx'
+import About from '../About/index.jsx'
+
 class Worklist extends Component {
 
   constructor (props) {
@@ -11,7 +14,7 @@ class Worklist extends Component {
   }
 
   componentWillMount () {
-    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez'
+    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cp1yhs0mfcyyjmssl41mjltseoqzjazdfn2uzjlc&order_dir=desc&count=20'
     fetch(URL).then(res => res.json())
     .then(data => {
       console.log(data.items)
@@ -37,17 +40,21 @@ class Worklist extends Component {
 
   render () {
     return (
-      <section className="b-worklist">
-        { this.state.works.map(item =>
-          <Link key={item.id} to={`/${item.id}`} className="item">
-            <div>
-              <small>{ item.type }</small>
-              <h3>{ item.title }</h3>
-            </div>
-            <img src={ item.image } />
-          </Link>
-        ) }
-      </section>
+      <div>
+        <Carousel />
+        <section className="b-worklist">
+          { this.state.works.map(item =>
+            <Link key={item.id} to={`/${item.id}`} className="item">
+              <div>
+                <small>{ item.type }</small>
+                <h3>{ item.title }</h3>
+              </div>
+              <img src={ item.image } />
+            </Link>
+          ) }
+        </section>
+        <About />
+      </div>
     )
   }
 }
