@@ -1,4 +1,10 @@
-@import 'main/reset';
+//@import 'main/reset';
+
+@import 'main/normalize';
+@import 'main/skeleton';
+@import 'main/color';
 @import 'main/main';
 
+@import 'components/header';
+@import 'components/carousel';
 @import 'components/work-list';
