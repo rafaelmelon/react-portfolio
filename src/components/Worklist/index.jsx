@@ -14,8 +14,9 @@ class Worklist extends Component {
   }
 
   componentWillMount () {
-    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cp1yhs0mfcyyjmssl41mjltseoqzjazdfn2uzjlc&order_dir=desc&count=20'
-    fetch(URL).then(res => res.json())
+    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cp1yhs0mfcyyjmssl41mjltseoqzjazdfn2uzjlc&count=20'
+    fetch(URL)
+    .then(res => res.json())
     .then(data => {
       console.log(data.items)
       let worksArray = []

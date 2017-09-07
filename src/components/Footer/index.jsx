@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <section>
+    <footer className="b-footer">
       <p>Made with love by © suix.com</p>
-    </section>
+    </footer>
   )
 }
 

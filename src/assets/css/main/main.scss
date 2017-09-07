@@ -6,4 +6,7 @@ body {
 a {
   color: $black;
   text-decoration: none;
+  &:hover {
+    color: $primary-1;
+  }
 }
