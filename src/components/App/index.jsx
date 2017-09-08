@@ -1,30 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
+import ScrollToTop from 'react-scroll-up'
 
-import Header from '../Header/index.jsx'
 import Main from '../Main/index.jsx'
 import Contact from '../Contact/index.jsx'
 import Footer from '../Footer/index.jsx'
+import Btntop from '../Btntop/index.jsx'
 
-export class App extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {}
-  }
-
-  componentDidMount () {
-
-  }
-  render () {
-    return (
-      <div>
-        
-        <Main />
-        <Contact />
-        <Footer />
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div>
+      <Main />
+      <Contact />
+      <Footer />
+      <ScrollToTop showUnder={ 180 } duration={ 1500 } >
+        <span className="top">
+          <svg version="1.1" viewBox="0 0 129 129">
+            <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+          </svg>
+          <span>Top</span>
+        </span>
+      </ScrollToTop>
+    </div>
+  )
 }
 
 export default App
