@@ -9,7 +9,8 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   .item {
-    height: 400px;
+    width: 25vw;
+    height: 50vw;
     overflow: hidden;
     background-color: yellow;
     -webkit-box-flex: 0;
@@ -17,18 +18,25 @@
     flex: calc(100%);
     position: relative;
     @media (min-width: 550px) {
+      height: 50vw;
       -ms-flex: calc(50%);
       flex: calc(50%);
     }
     @media (min-width: 750px) {
+      height: 33.333vw;
       -ms-flex: calc(33.333%);
       flex: calc(33.333%);
     }
     @media (min-width: 1200px) {
-      -ms-flex: calc(20%);
-      flex: calc(20%);
+      height: 25vw;
+      -ms-flex: calc(25%);
+      flex: calc(25%);
     }
     img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       opacity: 1;
       transition: $transition-opacity-1;
       -o-transition: $transition-opacity-1;
@@ -51,8 +59,11 @@
       small {
         color: $primary-1;
         font-size: 1.8rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         display: inline-block;
+        @media (min-width: 550px) {
+          margin-bottom: 3rem;
+        }
       }
       h3 {
         font-weight: 300;

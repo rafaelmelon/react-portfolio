@@ -39,15 +39,14 @@ class Work extends Component {
     })
     .catch((error) => console.log(error))
   }
-
+  
   render () {
     return (
       <section className="b-work">
         <div className="container">
           <div className="row">
             <h1>{ this.state.work.title }</h1>
-            <h2>{ this.state.work.subtitle }</h2>
-            { this.state.work.description }
+            <div dangerouslySetInnerHTML={{ __html: this.state.work.description }} />
             <Link to='/'>Back</Link>
           </div>
         </div>

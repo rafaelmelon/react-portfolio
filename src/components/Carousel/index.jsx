@@ -25,6 +25,7 @@ class Carousel extends Component {
       infinite: true,
       fade: true,
       speed: 5000,
+      draggable: false,
       slidesToShow: 1,
       slidesToScroll: 1
     }

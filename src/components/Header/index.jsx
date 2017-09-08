@@ -8,10 +8,10 @@ const Header = () => {
     <header className="b-nav">
       <div className="container">
         <div className="row">
-          <div className="four columns">
+          <div className="three columns">
             <img src={ logo } alt="Logo Suix" />
           </div>
-          <div className="eight columns">
+          <div className="nine columns">
             <nav>
               <ul>
                 <li>

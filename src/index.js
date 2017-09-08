@@ -7,7 +7,7 @@ import App from './components/App/index.jsx'
 import styles from './assets/css/index.scss'
 
 render((
-  <BrowserRouter>
+  <BrowserRouter history={ history }>
     <App />
   </BrowserRouter>
 ), document.getElementById('root'))

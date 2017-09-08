@@ -14,10 +14,11 @@ class Worklist extends Component {
   }
 
   componentWillMount () {
-    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cp1yhs0mfcyyjmssl41mjltseoqzjazdfn2uzjlc&count=20'
+    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cncdeujgpgbi7u9v6fbzzobfq0l1agkj7373esfj&count=20'
     fetch(URL)
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       let worksArray = []
       data.items.forEach(item => {
         if(item.categories.length > 0){
@@ -27,6 +28,7 @@ class Worklist extends Component {
             image: item.description.split('<img alt="" src="').pop().split('">').shift(),
             type: item.categories[0],
           }
+          console.log(workObject)
           worksArray.push(workObject)
         }else{
           return
