@@ -7,7 +7,7 @@ module.exports = merge(common, {
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Production',
+      title: 'PRO',
       template: './public/index.html',
       filename: 'index.html',
       inject: true,

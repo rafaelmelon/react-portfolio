@@ -34,13 +34,13 @@ class Header extends Component {
                       <li><Scrollchor animate={ duration } to='#works'>Works</Scrollchor></li>
                       <li><Scrollchor animate={ duration } to='#about'>About</Scrollchor></li>
                       <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
-                      <li><Link to=''>CV</Link></li>
+                      <li><Link to='/assets/files/cv-susana-vazquez.pdf'>CV</Link></li>
                     </ul>
                   :
                     <ul>
                       <li><Link to='/'>Home</Link></li>
                       <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
-                      <li><Link to=''>CV</Link></li>
+                      <li><Link to='/assets/files/cv-susana-vazquez.pdf'>CV</Link></li>
                     </ul>
                 }
               </nav>
