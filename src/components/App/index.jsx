@@ -4,7 +4,6 @@ import ScrollToTop from 'react-scroll-up'
 import Main from '../Main/index.jsx'
 import Contact from '../Contact/index.jsx'
 import Footer from '../Footer/index.jsx'
-import Btntop from '../Btntop/index.jsx'
 
 const App = () => {
   return (

@@ -33,16 +33,17 @@
       flex: calc(25%);
     }
     img {
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 1;
-      transition: $transition-opacity-1;
-      -o-transition: $transition-opacity-1;
-      -ms-transition: $transition-opacity-1;
-      -moz-transition: $transition-opacity-1;
-      -webkit-transition: $transition-opacity-1;
+      transition: $transition-all-1;
+      -o-transition: $transition-all-1;
+      -ms-transition: $transition-all-1;
+      -moz-transition: $transition-all-1;
+      -webkit-transition: $transition-all-1;
     }
     div {
       width: 80%;
@@ -71,12 +72,13 @@
     }
     &:hover {
       img {
+        width: 105%;
         opacity: 0.1;
-        transition: $transition-opacity-1;
-        -o-transition: $transition-opacity-1;
-        -ms-transition: $transition-opacity-1;
-        -moz-transition: $transition-opacity-1;
-        -webkit-transition: $transition-opacity-1;
+        transition: $transition-all-1;
+        -o-transition: $transition-all-1;
+        -ms-transition: $transition-all-1;
+        -moz-transition: $transition-all-1;
+        -webkit-transition: $transition-all-1;
       }
       div {
         opacity: 1;
