@@ -16,6 +16,7 @@ class Header extends Component {
   }
 
   render () {
+    const duration =  { duration: 1000 }
     return (
       <header className="b-nav">
         <div className="container">
@@ -30,15 +31,15 @@ class Header extends Component {
                 { this.state.page.nav == "home"
                   ?
                     <ul>
-                      <li><Scrollchor to='#works'>Works</Scrollchor></li>
-                      <li><Scrollchor to='#about'>About</Scrollchor></li>
-                      <li><Scrollchor to='#contact'>Contact</Scrollchor></li>
+                      <li><Scrollchor animate={ duration } to='#works'>Works</Scrollchor></li>
+                      <li><Scrollchor animate={ duration } to='#about'>About</Scrollchor></li>
+                      <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
                       <li><Link to=''>CV</Link></li>
                     </ul>
                   :
                     <ul>
                       <li><Link to='/'>Home</Link></li>
-                      <li><Scrollchor to='#contact'>Contact</Scrollchor></li>
+                      <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
                       <li><Link to=''>CV</Link></li>
                     </ul>
                 }
