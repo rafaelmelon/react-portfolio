@@ -9,7 +9,9 @@ const Header = () => {
       <div className="container">
         <div className="row">
           <div className="three columns">
-            <img src={ logo } alt="Logo Suix" />
+            <Link className="logo" to='/'>
+              <img src={ logo } alt="Logo Suix" />
+            </Link>
           </div>
           <div className="nine columns">
             <nav>

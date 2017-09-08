@@ -1,6 +1,9 @@
 .b-nav {
   padding: 6rem 0;
   text-align: center;
+  .logo {
+    float: left;
+  }
   nav {
     ul {
       margin-bottom: 0;

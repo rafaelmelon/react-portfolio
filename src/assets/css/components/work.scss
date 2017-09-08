@@ -6,7 +6,10 @@
     }
   }
   img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: inherit;
   }
   figcaption {
     font-size: 1.2rem;
@@ -24,6 +27,19 @@
   ol {
     li {
       font-family: $secondary-font;
+    }
+  }
+  .anchornav {
+    font-size: 2rem;
+    svg {
+      width: 15px;
+      fill: $primary-1;
+      margin-right: 0.5rem;
+    }
+    &:hover {
+      svg {
+        fill: $grey-3;
+      }
     }
   }
 }
