@@ -20,15 +20,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            {
-              loader: "css-loader",
-              options: {
-                 minimize: true
-              }
-            },
-            {
-              loader: "sass-loader"
-            }
+            { loader: "css-loader", options: { minimize: true } }, { loader: "sass-loader" }
           ]
         })
       },
