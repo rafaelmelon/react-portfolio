@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Header from '../Header/index.jsx'
 import Carousel from '../Carousel/index.jsx'
 import About from '../About/index.jsx'
 
@@ -18,7 +19,6 @@ class Worklist extends Component {
     fetch(URL)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       let worksArray = []
       data.items.forEach(item => {
         if(item.categories.length > 0){
@@ -28,7 +28,6 @@ class Worklist extends Component {
             image: item.description.split('<img alt="" src="').pop().split('">').shift(),
             type: item.categories[0],
           }
-          console.log(workObject)
           worksArray.push(workObject)
         }else{
           return
@@ -40,12 +39,14 @@ class Worklist extends Component {
   }
 
   render () {
+
     return (
       <div>
+        <Header nav={ {nav: "home"} } />
         <Carousel />
         <section id="works" className="b-worklist">
           { this.state.works.map(item =>
-            <Link key={item.id} to={`/${item.id}`} className="item">
+            <Link key={item.id} to={ `/${item.id}` } className="item">
               <div>
                 <small>{ item.type }</small>
                 <h3>{ item.title }</h3>

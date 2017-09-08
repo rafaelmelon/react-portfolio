@@ -6,10 +6,19 @@ import Contact from '../Contact/index.jsx'
 import Footer from '../Footer/index.jsx'
 
 export class App extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {}
+  }
+
+  componentDidMount () {
+
+  }
   render () {
     return (
       <div>
-        <Header />
+        
         <Main />
         <Contact />
         <Footer />

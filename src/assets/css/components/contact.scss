@@ -5,6 +5,9 @@
       list-style-type: none;
       a {
         color: $primary-1;
+        &:hover {
+          color: $grey-3;
+        }
       }
     }
   }
