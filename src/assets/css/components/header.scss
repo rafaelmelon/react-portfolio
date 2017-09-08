@@ -1,6 +1,17 @@
 .b-nav {
   padding: 6rem 0;
   text-align: center;
+  .logo {
+    svg {
+      fill: $grey-5;
+      transition: $transition-all-1;
+    }
+    &:hover {
+      svg {
+        fill: $primary-1;
+      }
+    }
+  }
   nav {
     ul {
       margin-bottom: 0;

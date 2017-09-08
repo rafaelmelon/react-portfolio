@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Contact = () => {
 
   const routes = {
-    email: "info@suix.com",
+    email: "susana.vazquez.rguez@gmail.com",
     linkedin: "https://www.linkedin.com/in/susanavazquezrodriguez/",
     medium: "https://medium.com/@susana.vazquez.rguez",
     twitter: "https://twitter.com/usavor",

@@ -2,7 +2,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const BabelWebpackPlugin = require('babel-minify-webpack-plugin')
+//const BabelWebpackPlugin = require('babel-minify-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -24,12 +24,20 @@ module.exports = {
           ]
         })
       },
-      { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' }
+      { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' },
+      {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      }
     ]
   },
   plugins: [
     //new CleanWebpackPlugin(['dist']),
-    new BabelWebpackPlugin(),
+    //new BabelWebpackPlugin(),
     new ExtractTextPlugin('[name].min.css', {
       allChunks: true
     })
