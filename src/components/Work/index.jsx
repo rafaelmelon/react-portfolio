@@ -1,6 +1,8 @@
+// Dependencies
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+// Components
 import Header from '../Header/index.jsx'
 
 class Work extends Component {

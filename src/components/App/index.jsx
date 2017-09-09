@@ -1,6 +1,8 @@
+// Dependencies
 import React from 'react'
 import ScrollToTop from 'react-scroll-up'
 
+// Components
 import Main from '../Main/index.jsx'
 import Contact from '../Contact/index.jsx'
 import Footer from '../Footer/index.jsx'

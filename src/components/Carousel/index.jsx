@@ -1,7 +1,9 @@
+// Dependencies
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 
+// Data
 import dataCarousel from '../../dataCarousel'
 
 class Carousel extends Component {
