@@ -4,11 +4,12 @@
   .logo {
     svg {
       fill: $grey-5;
-      transition: $transition-all-1;
     }
     &:hover {
       svg {
-        fill: $primary-1;
+        animation-name: fill;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
       }
     }
   }
@@ -39,5 +40,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes fill {
+  0% {
+    fill: $grey-5;
+  } 50% {
+    fill: $primary-1;
+  } 100% {
+    fill: $grey-5;
   }
 }
