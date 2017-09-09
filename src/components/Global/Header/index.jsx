@@ -1,20 +1,20 @@
 // Dependencies
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import Scrollchor from 'react-scrollchor'
 
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.array.isRequired
+}
+
 class Header extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      page: props.nav
-    }
-
-  }
 
   render () {
+    const { title, items } = this.props
     const duration =  { duration: 1000 }
+
     return (
       <header className="b-nav">
         <div className="container">
@@ -28,21 +28,15 @@ class Header extends Component {
             </div>
             <div className="nine columns">
               <nav>
-                { this.state.page.nav == "home"
-                  ?
-                    <ul>
-                      <li><Scrollchor animate={ duration } to='#works'>Works</Scrollchor></li>
-                      <li><Scrollchor animate={ duration } to='#about'>About</Scrollchor></li>
-                      <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
-                      <li><Link target="_blank" to='http://suix.es/assets/files/cvsusanavazquez.pdf'>CV</Link></li>
-                    </ul>
-                  :
-                    <ul>
-                      <li><Link to='/'>Home</Link></li>
-                      <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
-                      <li><Link to='http://suix.es/assets/files/cvsusanavazquez.pdf' >CV</Link></li>
-                    </ul>
-                }
+                <ul>
+                  { items && items.map((item, key) =>
+                    <li key={ key }>
+                      <Scrollchor animate={ duration } to={ item.url }>{ item.title }</Scrollchor>
+                    </li>
+                  ) }
+                  <li><Scrollchor animate={ duration } to='#contact'>Contact</Scrollchor></li>
+                  <li><Link target="_blank" to='http://suix.es/assets/files/cvsusanavazquez.pdf'>CV</Link></li>
+                </ul>
               </nav>
             </div>
           </div>
@@ -51,5 +45,7 @@ class Header extends Component {
     )
   }
 }
+
+Header.propTypes = propTypes
 
 export default Header

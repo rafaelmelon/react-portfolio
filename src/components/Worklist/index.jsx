@@ -2,12 +2,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-// Components
-import Header from '../Header/index.jsx'
-import Carousel from '../Carousel/index.jsx'
-import About from '../About/index.jsx'
+// Data
+import url from '../../data/url'
 
-class Worklist extends Component {
+class WorkList extends Component {
 
   constructor (props) {
     super(props)
@@ -17,8 +15,7 @@ class Worklist extends Component {
   }
 
   componentWillMount () {
-    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cncdeujgpgbi7u9v6fbzzobfq0l1agkj7373esfj&count=20'
-    fetch(URL)
+    fetch(url)
     .then(res => res.json())
     .then(data => {
       let worksArray = []
@@ -43,9 +40,7 @@ class Worklist extends Component {
   render () {
 
     return (
-      <div>
-        <Header nav={ {nav: "home"} } />
-        <Carousel />
+
         <section id="works" className="b-worklist">
           { this.state.works.map(item =>
             <Link key={item.id} to={ `/${item.id}` } className="item">
@@ -57,10 +52,9 @@ class Worklist extends Component {
             </Link>
           ) }
         </section>
-        <About />
-      </div>
+
     )
   }
 }
 
-export default Worklist
+export default WorkList

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 
 // Data
-import dataCarousel from '../../dataCarousel'
+import slides from '../../data/carousel'
 
 class Carousel extends Component {
 
@@ -16,10 +16,8 @@ class Carousel extends Component {
   }
 
   componentWillMount () {
-
     window.scrollTo(0,0)
-
-    this.state.quotes = dataCarousel
+    this.state.quotes = slides
   }
 
   render () {
@@ -37,14 +35,18 @@ class Carousel extends Component {
 
     return (
       <section className="b-carousel">
-        <Slider {...settings}>
-          { this.state.quotes.map((item) => {
-            return <div  key={ item.id }>
-              <h1>{ item.quote }</h1>
-              <p>{ item.author }</p>
-            </div>
-          }) }
-        </Slider>
+        <div className="container">
+          <div className="row">
+            <Slider {...settings}>
+              { this.state.quotes.map((item, key) => {
+                return <div key={ key }>
+                  <h1>{ item.quote }</h1>
+                  <p>{ item.author }</p>
+                </div>
+              }) }
+            </Slider>
+          </div>
+        </div>
       </section>
     )
   }

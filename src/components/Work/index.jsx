@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 // Components
-import Header from '../Header/index.jsx'
+import Contact from '../Contact/index.jsx'
+
+// Data
+import url from '../../data/url'
 
 class Work extends Component {
   constructor (props) {
@@ -19,8 +22,7 @@ class Work extends Component {
 
     window.scrollTo(0,0)
 
-    const URL = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40susana.vazquez.rguez&api_key=cp1yhs0mfcyyjmssl41mjltseoqzjazdfn2uzjlc&count=20'
-    fetch(URL)
+    fetch(url)
     .then(res => res.json())
     .then(data => {
       let worksArray = []
@@ -48,8 +50,7 @@ class Work extends Component {
 
   render () {
     return (
-      <div>
-        <Header nav={ {nav: "work"} } />
+      <div className="Work">
         <section className="b-work">
           <div className="container">
             <div className="row">
@@ -64,6 +65,7 @@ class Work extends Component {
             </div>
           </div>
         </section>
+        <Contact />
       </div>
     )
   }
