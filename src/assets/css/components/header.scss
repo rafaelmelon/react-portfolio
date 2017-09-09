@@ -3,6 +3,7 @@
   text-align: center;
   .logo {
     svg {
+      width: 20rem;
       fill: $grey-5;
     }
     &:hover {
@@ -24,9 +25,6 @@
     }
   }
   @media (min-width: 550px) {
-    .logo {
-      float: left;
-    }
     nav {
       float: right;
     }

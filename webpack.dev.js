@@ -9,10 +9,14 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'DEV',
       template: './public/index.html',
       filename: 'index.html',
       inject: 'body'
     }),
-  ]
+  ],
+  devServer: {
+    historyApiFallback: {
+      disableDotRule: true
+    }
+  }
 })

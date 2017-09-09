@@ -38,21 +38,18 @@ class WorkList extends Component {
   }
 
   render () {
-
     return (
-
-        <section id="works" className="b-worklist">
-          { this.state.works.map(item =>
-            <Link key={item.id} to={ `/${item.id}` } className="item">
-              <div>
-                <small>{ item.type }</small>
-                <h3>{ item.title }</h3>
-              </div>
-              <img alt={ item.title } src={ item.image } />
-            </Link>
-          ) }
-        </section>
-
+      <section className="b-worklist">
+        { this.state.works.map(item =>
+          <Link key={item.id} to={ `/post/${item.id}` } className="item">
+            <div>
+              <small>{ item.type }</small>
+              <h3>{ item.title }</h3>
+            </div>
+            <img alt={ item.title } src={ item.image } />
+          </Link>
+        ) }
+      </section>
     )
   }
 }

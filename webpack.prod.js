@@ -7,10 +7,15 @@ module.exports = merge(common, {
   devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'PRO',
       template: './public/index.html',
       filename: 'index.html',
       inject: true,
+      minify: {
+        collapseWhitespace: true,
+        collapseInlineTagWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true
+      }
     }),
   ]
 

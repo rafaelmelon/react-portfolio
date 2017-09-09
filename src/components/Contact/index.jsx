@@ -12,7 +12,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="b-contact">
+    <section className="b-contact">
       <div className="container">
         <div className="row">
           <div className="four columns">

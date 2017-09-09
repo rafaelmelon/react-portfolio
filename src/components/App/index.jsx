@@ -18,12 +18,10 @@ const propTypes = {
 class App extends Component {
   render() {
     const { children } = this.props
+
     return (
       <div className="App">
-        <Header
-          title="Codejobs"
-          items={ items }
-        />
+        <Header items={ items } />
         <Content body={ children } />
         <Footer />
         <ScrollToTop showUnder={ 180 } duration={ 1500 } >

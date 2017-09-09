@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-// Components
 import Contact from '../Contact/index.jsx'
 
 // Data
