@@ -24,15 +24,7 @@ module.exports = {
           ]
         })
       },
-      { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' },
-      {
-        test: /\.pdf$/,
-        use: [
-          {
-            loader: 'file-loader'
-          }
-        ]
-      }
+      { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192' }
     ]
   },
   plugins: [

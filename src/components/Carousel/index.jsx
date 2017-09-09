@@ -14,6 +14,9 @@ class Carousel extends Component {
   }
 
   componentWillMount () {
+
+    window.scrollTo(0,0)
+
     this.state.quotes = dataCarousel
   }
 
