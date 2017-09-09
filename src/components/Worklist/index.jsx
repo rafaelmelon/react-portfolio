@@ -51,7 +51,7 @@ class Worklist extends Component {
                 <small>{ item.type }</small>
                 <h3>{ item.title }</h3>
               </div>
-              <img src={ item.image } />
+              <img alt={ item.title } src={ item.image } />
             </Link>
           ) }
         </section>
