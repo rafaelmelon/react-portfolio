@@ -1,11 +1,6 @@
 // Dependencies
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-
-const propTypes = {
-  items: PropTypes.array.isRequired
-}
 
 class Header extends Component {
   constructor (props) {
@@ -13,8 +8,6 @@ class Header extends Component {
   }
 
   render () {
-    const { items } = this.props
-    const duration =  { duration: 1000 }
     return (
       <header className="b-nav">
         <div className="container">
@@ -30,7 +23,4 @@ class Header extends Component {
     )
   }
 }
-
-Header.propTypes = propTypes
-
 export default Header

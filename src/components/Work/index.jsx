@@ -1,7 +1,9 @@
 // Dependencies
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
+// Components
 import Contact from '../Contact/index.jsx'
 
 // Data

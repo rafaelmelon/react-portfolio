@@ -8,8 +8,6 @@ import Header from '../Global/Header/index.jsx'
 import Content from '../Global/Content/index.jsx'
 import Footer from '../Global/Footer/index.jsx'
 
-// Data
-import items from '../../data/menu'
 
 const propTypes = {
   children: PropTypes.object.isRequired
@@ -21,7 +19,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header items={ items } />
+        <Header />
         <Content body={ children } />
         <Footer />
         <ScrollToTop showUnder={ 180 } duration={ 1500 } >
