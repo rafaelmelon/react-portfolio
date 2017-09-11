@@ -1,16 +1,7 @@
 // Dependencies
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Contact = () => {
-
-  const routes = {
-    email: "susana.vazquez.rguez@gmail.com",
-    linkedin: "https://www.linkedin.com/in/susanavazquezrodriguez/",
-    medium: "https://medium.com/@susana.vazquez.rguez",
-    twitter: "https://twitter.com/usavor",
-  }
-
   return (
     <section className="b-contact">
       <div className="container">
@@ -20,12 +11,12 @@ const Contact = () => {
           </div>
           <div className="eight columns">
             <ul>
-              <li><Link to={ `mailto:${ routes.email }` } target="_blank">{ routes.email }</Link></li>
+              <li><a href="mailto:info@suix.es">info@suix.es</a></li>
               <li>(+34) 678 914 083</li>
               <br />
-              <li><Link to={ routes.linkedin } target="_blank">LinkedIn</Link></li>
-              <li><Link to={ routes.medium } target="_blank">Medium</Link></li>
-              <li><Link to={ routes.twitter } target="_blank">Twitter</Link></li>
+              <li><a href="https://www.linkedin.com/in/susanavazquezrodriguez/" target="_blank">LinkedIn</a></li>
+              <li><a href="https://medium.com/@susana.vazquez.rguez" target="_blank">Medium</a></li>
+              <li><a href="https://twitter.com/usavor/" target="_blank">Twitter</a></li>
             </ul>
           </div>
         </div>

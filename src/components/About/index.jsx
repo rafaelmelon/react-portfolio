@@ -14,7 +14,7 @@ const About = () => {
             <p>I am Susana Vázquez Product / UX / UI Designer in the digital world and an architect in the “other” one.</p>
             <p>I want to be part of those who build usable, confortable and beautiful sites.</p>
             <p>I like to face new challenges so I have worked as an architect, but also as a photographer and a web designer / developer. I always pay attention to detail and I am a good listener so I can speak Spanish, Galician, English and French. </p>
-            <p>See my<Link target="_blank" to='http://suix.es/assets/files/cvsusanavazquez.pdf'> curriculum vitae</Link></p>
+            <p>See my<a href="http://suix.es/assets/files/cvsusanavazquez.pdf" target="_blank"> curriculum vitae</a></p>
           </div>
         </div>
       </div>

@@ -19,17 +19,17 @@ class WorkList extends Component {
     .then(res => res.json())
     .then(data => {
       let worksArray = []
+      let type
       data.items.forEach(item => {
-        if(item.categories.length > 0){
-          let workObject = {
-            id: item.guid.split("/").pop(),
-            title: item.title,
-            image: item.description.split('<img alt="" src="').pop().split('">').shift(),
-            type: item.categories[0],
+        for (var i = 0; i < item.categories.length; i++) {
+          if(item.categories[i] === "post" || item.categories[i] === "project" || item.categories[i] === "projects") {
+            worksArray.push({
+              id: item.guid.split("/").pop(),
+              title: item.title,
+              image: item.description.split('<img alt="" src="').pop().split('">').shift(),
+              type: item.categories[i],
+            })
           }
-          worksArray.push(workObject)
-        }else{
-          return
         }
       })
       this.setState({ works: worksArray })
@@ -41,7 +41,7 @@ class WorkList extends Component {
     return (
       <section className="b-worklist">
         { this.state.works.map(item =>
-          <Link key={item.id} to={ `/post/${item.id}` } className="item">
+          <Link key={item.id} to={ `/${item.id}` } className="item">
             <div>
               <small>{ item.type }</small>
               <h3>{ item.title }</h3>

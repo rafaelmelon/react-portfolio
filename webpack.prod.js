@@ -9,13 +9,7 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
-      inject: true,
-      minify: {
-        collapseWhitespace: true,
-        collapseInlineTagWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true
-      }
+      inject: true
     }),
   ]
 
