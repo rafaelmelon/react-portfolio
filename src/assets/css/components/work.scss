@@ -5,8 +5,15 @@
   }
   a {
     color: $primary-1;
+    margin-bottom: 2.5rem;
+    display: inline-block;
     &:hover {
       color: $grey-3;
+    }
+  }
+  p {
+    a {
+      margin-bottom: 0;
     }
   }
   img {

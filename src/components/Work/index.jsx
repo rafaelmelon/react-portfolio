@@ -25,19 +25,17 @@ class Work extends Component {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-      let worksArray = []
+      let worksArray = [],
+          workObject = {},
+          links
       data.items.forEach(item => {
-        if(item.categories.length > 0){
-          let workObject = {
-            id: item.guid,
-            title: item.title,
-            subtitle: item.description.split('<h4>').pop().split('</h4>').shift(),
-            description: item.description
-          }
-          worksArray.push(workObject)
-        }else{
-          return
+        workObject = {
+          id: item.guid,
+          title: item.title,
+          subtitle: item.description.split('<h4>').pop().split('</h4>').shift(),
+          description: item.description
         }
+        worksArray.push(workObject)
       })
       let idRoute = "https://medium.com/p/"+this.props.match.params.id
       let result = worksArray.filter(obj => {

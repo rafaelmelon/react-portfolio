@@ -11,9 +11,9 @@ const About = () => {
             <h2>About</h2>
           </div>
           <div className="eight columns">
-            <p>I am Susana Vázquez Product / UX / UI Designer in the digital world and an architect in the “other” one.</p>
-            <p>I want to be part of those who build usable, confortable and beautiful sites.</p>
-            <p>I like to face new challenges so I have worked as an architect, but also as a photographer and a web designer / developer. I always pay attention to detail and I am a good listener so I can speak Spanish, Galician, English and French. </p>
+            <p>Hi! I am <b>Susana Vázquez a Product Designer / UX / UI</b> in the digital world and an architect in the “real” one. I think that everything is about usability, comfort and beauty.</p>
+            <p>I am creative, communicative and efficient in my daily work. I like to face new challenges so I have worked as an architect, but also as a photographer and a web designer / developer and I have lived in France and New York.</p>
+            <p>I always pay attention to detail because I like things well done and I am a good listener so I can speak Spanish, Galician, English and French. Theatre and travelling are some of my passions, and I always want to try new experiences.</p>
             <p>See my<a href="http://suix.es/assets/files/cvsusanavazquez.pdf" target="_blank"> curriculum vitae</a></p>
           </div>
         </div>

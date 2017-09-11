@@ -18,10 +18,11 @@ class WorkList extends Component {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-      let worksArray = []
-      let type
+      let worksArray = [],
+          type,
+          i
       data.items.forEach(item => {
-        for (var i = 0; i < item.categories.length; i++) {
+        for (i = 0; i < item.categories.length; i++) {
           if(item.categories[i] === "post" || item.categories[i] === "project" || item.categories[i] === "projects") {
             worksArray.push({
               id: item.guid.split("/").pop(),
