@@ -1,14 +1,19 @@
+// Template & Layout
 @import 'main/template/normalize';
 @import 'main/template/skeleton';
 
+// Vendor 
 @import 'main/vendor/slider';
 
+// Helpers
 @import 'main/helpers/color';
 @import 'main/helpers/fonts';
 @import 'main/helpers/mixins';
 
+// Custom
 @import 'main/main';
 
+// Components
 @import 'components/header';
 @import 'components/carousel';
 @import 'components/work-list';
