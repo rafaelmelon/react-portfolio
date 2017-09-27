@@ -19,4 +19,5 @@ class Content extends Component {
 
 Content.propTypes = propTypes
 
+
 export default Content

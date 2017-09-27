@@ -8,7 +8,6 @@ import Header from '../Global/Header/index.jsx'
 import Content from '../Global/Content/index.jsx'
 import Footer from '../Global/Footer/index.jsx'
 
-
 const propTypes = {
   children: PropTypes.object.isRequired
 }
