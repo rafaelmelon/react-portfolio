@@ -19,7 +19,6 @@ class Work extends Component {
   }
 
   componentDidMount () {
-
     window.scrollTo(0,0)
 
     fetch(url)
