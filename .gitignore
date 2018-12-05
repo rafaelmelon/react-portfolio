@@ -1,18 +1,4 @@
-# dependencies
-npm-debug.log
-yarn-error.log
-dmd
-jest
-coverage
-jsdoc-api
-node_modules
-
-# production
-/public
-/dist
-
-# misc
-._*
-.DS_Store
-.env
-npm-debug.log*
+.idea/
+dist/
+node_modules/
+src/**/*.jsx
