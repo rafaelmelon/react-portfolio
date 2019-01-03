@@ -29,6 +29,10 @@
     "start": "yarn run serve",
     "heroku-postbuild": "yarn && yarn run build"
   },
+  "engines": {
+    "node": ">=8.9.4",
+    "yarn": "1.x"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
