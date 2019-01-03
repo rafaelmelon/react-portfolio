@@ -1,19 +1,36 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": false,
-        "module": "commonjs",
-        "target": "es5",
-        "jsx": "react",
-        "lib": ["es5", "es6", "dom"]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["es5", "es6", "dom"],
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@containers/*": ["containers/*"],
+      "@components/*": ["components/*"],
+      "@theme/*": ["theme/*"],
+      "@redux/*": ["redux/*"],
+      "@utils/*": ["utils/*"],
+      "@locales/*": ["locales/*"],
+      "@routes/*": ["routes/*"],
+      "@forms/*": ["forms/*"]
     },
-    "include": [
-        "./src/**/*"
-    ],
-    "awesomeTypescriptLoaderOptions": {
-        "reportFiles": [
-            "./src/**/*"
-        ]
-    }
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true
+  },
+  "exclude": ["node_modules", "**/*spec.ts"],
+  "include": ["src/**/*"],
+  "awesomeTypescriptLoaderOptions": {
+    "reportFiles": ["./src/**/*"]
+  }
 }

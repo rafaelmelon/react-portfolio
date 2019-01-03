@@ -20,7 +20,8 @@ export const carousel = [
     author: "Mark Twain"
   },
   {
-    quote: "«Design is not just what it looks like and feels like. Design is how it works.»",
+    quote:
+      "«Design is not just what it looks like and feels like. Design is how it works.»",
     author: "Steve Jobs"
   }
 ];

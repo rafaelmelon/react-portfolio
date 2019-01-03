@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Footer, Content, Header } from "../../components/index";
+import { Content, Footer, Header } from "../../components/index";
 
 import "../../assets/scss/index.scss";
 
@@ -9,13 +9,11 @@ export interface AppProps {
 }
 
 class App extends React.Component<AppProps, undefined> {
-  render() {
+  public render() {
     return (
       <div className="App">
         <Header />
-        <Content>
-          {this.props.children}
-        </Content>
+        <Content>{this.props.children}</Content>
         <Footer />
       </div>
     );

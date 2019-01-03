@@ -5,12 +5,8 @@ export interface ContentProps {
 }
 
 class Content extends React.Component<ContentProps, undefined> {
-  render() {
-    return (
-      <div className="Content">
-        {this.props.children}
-      </div>
-    );
+  public render() {
+    return <div className="Content">{this.props.children}</div>;
   }
 }
 

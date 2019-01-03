@@ -11,17 +11,17 @@ interface PostProps {
 }
 
 interface PostState {
-  post: Object;
+  post: object;
   error: any;
 }
 
 class Post extends React.Component<PostProps, PostState> {
-  state = {
+  public state = {
     post: {},
-    error: null,
+    error: null
   };
 
-  componentWillMount () {
+  public componentWillMount() {
     window.scrollTo(0, 0);
     fetch(`${APIRSS}/v1/api.json?rss_url=${API}/feed/${USER}`)
       .then(res => res.json())
@@ -29,17 +29,22 @@ class Post extends React.Component<PostProps, PostState> {
         const posts = data.items.map(item => ({
           id: item.guid.split("/").pop(),
           title: item.title,
-          subtitle: item.description.split("<h4>").pop().split("</h4>").shift(),
-          description: item.description,
+          subtitle: item.description
+            .split("<h4>")
+            .pop()
+            .split("</h4>")
+            .shift(),
+          description: item.description
         }));
-        const post = posts.filter(item => item.id === this.props.match.params.id);
+        const post = posts.filter(
+          item => item.id === this.props.match.params.id
+        );
         this.setState({ post: post[0] });
       })
-      .catch((error) => this.setState({ error }));
+      .catch(error => this.setState({ error }));
   }
 
-
-  render () {
+  public render() {
     const { post } = this.state;
 
     return (
@@ -50,7 +55,8 @@ class Post extends React.Component<PostProps, PostState> {
               <h1>{post.title}</h1>
               <div dangerouslySetInnerHTML={{ __html: post.description }} />
               <Link className="anchornav" to="/">
-                <img src={iconArrow} />Home
+                <img src={iconArrow} />
+                Home
               </Link>
             </div>
           </div>
@@ -62,4 +68,3 @@ class Post extends React.Component<PostProps, PostState> {
 }
 
 export default Post;
-

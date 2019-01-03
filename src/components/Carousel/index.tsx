@@ -4,11 +4,11 @@ import Slider from "react-slick";
 import { carousel } from "../../utils/index";
 
 class Carousel extends React.Component {
-  componentWillMount () {
+  public componentWillMount() {
     window.scrollTo(0, 0);
   }
 
-  render () {
+  public render() {
     const settings = {
       dots: false,
       arrows: false,
@@ -26,11 +26,12 @@ class Carousel extends React.Component {
         <div className="container">
           <div className="row">
             <Slider {...settings}>
-              {carousel.map((item, key) => (<div key={key}>
-                <h1>{item.quote}</h1>
-                <p>{item.author}</p>
-              </div>)
-              )}
+              {carousel.map((item, key) => (
+                <div key={key}>
+                  <h1>{item.quote}</h1>
+                  <p>{item.author}</p>
+                </div>
+              ))}
             </Slider>
           </div>
         </div>
