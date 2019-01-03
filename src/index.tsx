@@ -1,32 +1,15 @@
 import * as React from "react";
 import { render } from "react-dom";
-import { AppContainer } from "react-hot-loader";
-import { HashRouter } from "react-router-dom";
+import { hot } from 'react-hot-loader';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from "./routes";
 
-const rootEl = document.getElementById("root");
-
-render(
-  <AppContainer>
-    <HashRouter>
-      <AppRoutes />
-    </HashRouter>
-  </AppContainer>,
-  rootEl
+const Root = () => (
+  <Router>
+    <AppRoutes />
+  </Router>
 );
 
-// Hot Module Replacement API
-declare let module: { hot: any };
+const HotRoot = hot(module)(Root);
 
-if (module.hot) {
-  module.hot.accept("./containers/App/index", () => {
-    const NewApp = require("./containers/App/index").default;
-
-    render(
-      <AppContainer>
-        <NewApp />
-      </AppContainer>,
-      rootEl
-    );
-  });
-}
+render(<HotRoot />, document.getElementById("root"));
