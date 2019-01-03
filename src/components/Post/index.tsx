@@ -11,13 +11,19 @@ interface PostProps {
 }
 
 interface PostState {
-  post: object;
+  post: {
+    title: string;
+    description: string;
+  };
   error: any;
 }
 
 class Post extends React.Component<PostProps, PostState> {
   public state = {
-    post: {},
+    post: {
+      title: '',
+      description: '',
+    },
     error: null
   };
 

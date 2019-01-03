@@ -8,7 +8,7 @@ export interface AppProps {
   children: React.ReactNode;
 }
 
-class App extends React.Component<AppProps, undefined> {
+class App extends React.Component<AppProps> {
   public render() {
     return (
       <div className="App">

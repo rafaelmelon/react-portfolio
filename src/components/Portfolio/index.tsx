@@ -5,7 +5,7 @@ interface PortfolioProps {
   portfolio: any[];
 }
 
-class Portfolio extends React.Component<PortfolioProps, undefined> {
+class Portfolio extends React.Component<PortfolioProps> {
   public render() {
     return (
       <section className="b-worklist">
