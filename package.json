@@ -24,9 +24,10 @@
     "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
     "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rm -f -r -d dist",
-    "start": "yarn run start-dev",
-    "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
-    "start-prod": "yarn run build && node express.js"
+    "dev": "webpack-dev-server --config=configs/webpack/dev.js",
+    "serve": "node express.js",
+    "start": "yarn run serve",
+    "heroku-postbuild": "yarn && yarn run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
