@@ -1,7 +1,7 @@
 export const API = "https://api.medium.com";
 export const APIRSS = "https://api.rss2json.com";
 export const USER = "@susana.vazquez.rguez";
-export const API_KEY = "xu9zd9c5ddjosogukzs7ekwozujofnq4e2z0exjn";
+
 export const carousel = [
   {
     quote: "«Simple is hard. Easy is harder. Invisible is hardest.»",

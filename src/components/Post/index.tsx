@@ -27,7 +27,7 @@ class Post extends React.Component<PostProps, PostState> {
     error: null
   };
 
-  public componentWillMount() {
+  public componentDidMount() {
     window.scrollTo(0, 0);
     fetch(`${APIRSS}/v1/api.json?rss_url=${API}/feed/${USER}`)
       .then(res => res.json())
