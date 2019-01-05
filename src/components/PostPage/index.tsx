@@ -5,12 +5,12 @@ import { iconArrow } from "../../assets/index";
 import { API, APIRSS, USER } from "../../utils/index";
 import Contact from "../Contact/index";
 
-interface PostProps {
+interface PostPageProps {
   portfolio: any[];
   match: any;
 }
 
-interface PostState {
+interface PostPageState {
   post: {
     title: string;
     description: string;
@@ -18,11 +18,11 @@ interface PostState {
   error: any;
 }
 
-class Post extends React.Component<PostProps, PostState> {
+class PostPage extends React.Component<PostPageProps, PostPageState> {
   public state = {
     post: {
-      title: '',
-      description: '',
+      title: "",
+      description: ""
     },
     error: null
   };
@@ -73,4 +73,4 @@ class Post extends React.Component<PostProps, PostState> {
   }
 }
 
-export default Post;
+export default PostPage;

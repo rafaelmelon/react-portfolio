@@ -20,9 +20,7 @@ const Header = () => {
           <div className="col-auto">
             <div className="row justify-content-end">
               <div className="social">
-                <Link to="/">
-                  {'info@suix.es'}
-                </Link>
+                <Link to="/">{"info@suix.es"}</Link>
                 <Link to="/">
                   <img src={twitter} />
                 </Link>

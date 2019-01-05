@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-const About = () => {
+const Intro = () => {
   return (
-    <section className="b-about">
+    <section className="b-intro">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -15,7 +15,7 @@ const About = () => {
               For me, everything is about people & design.
             </p>
             <p className="text-left">
-              <Link to="/">
+              <Link to="/about">
                 <span>10</span> real facts about me
               </Link>
             </p>
@@ -26,4 +26,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Intro;

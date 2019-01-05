@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
     <section className="b-notfound">
       <div className="container">
@@ -13,4 +13,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

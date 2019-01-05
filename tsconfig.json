@@ -16,7 +16,7 @@
       "@containers/*": ["containers/*"],
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"],
-      "@routes/*": ["routes/*"],
+      "@routes/*": ["routes/*"]
     },
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,

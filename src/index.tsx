@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
-import { hot } from 'react-hot-loader';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { hot } from "react-hot-loader";
+import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "./routes";
 
 const Root = () => (
