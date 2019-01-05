@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import { about } from "../../utils/constants";
 import { iconArrow } from "../../assets/index";
+import { about } from "../../utils/constants";
 
 class AboutPage extends React.Component {
   public render() {

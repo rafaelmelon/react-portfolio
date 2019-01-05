@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import { socialLinks } from "../../../utils/constants";
 import { linkedin } from "../../../assets/index";
 import { twitter } from "../../../assets/index";
 import { medium } from "../../../assets/index";
+import { socialLinks } from "../../../utils/constants";
 
 const Footer = () => {
   return (

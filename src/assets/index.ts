@@ -13,3 +13,4 @@ export const imgAbout6 = require("./img/about-6.jpg");
 export const imgAbout7 = require("./img/about-7.jpg");
 export const imgAbout8 = require("./img/about-8.jpg");
 export const imgAbout9 = require("./img/about-9.jpg");
+export const imgAbout10 = require("./img/about-10.jpg");

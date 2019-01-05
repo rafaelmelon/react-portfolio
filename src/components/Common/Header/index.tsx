@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import { socialLinks } from "../../../utils/constants";
 import { logo } from "../../../assets/index";
 import { linkedin } from "../../../assets/index";
 import { twitter } from "../../../assets/index";
 import { medium } from "../../../assets/index";
+import { socialLinks } from "../../../utils/constants";
 
 const Header = () => {
   return (
@@ -22,7 +22,9 @@ const Header = () => {
           <div className="col-auto">
             <div className="row justify-content-end">
               <div className="social">
-                <a href={`mailto:${socialLinks.email}`}  target="_blank">{"info@suix.es"}</a>
+                <a href={`mailto:${socialLinks.email}`} target="_blank">
+                  {"info@suix.es"}
+                </a>
                 <a href={socialLinks.linkedin} target="_blank">
                   <img src={linkedin} />
                 </a>
