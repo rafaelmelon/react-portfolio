@@ -1,15 +1,17 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
+import { socialLinks } from "../../../utils/constants";
 import { logo } from "../../../assets/index";
 import { linkedin } from "../../../assets/index";
 import { twitter } from "../../../assets/index";
+import { medium } from "../../../assets/index";
 
 const Header = () => {
   return (
     <header className="b-nav">
       <div className="container">
-        <div className="row justify-content-between align-items-center">
+        <div className="row justify-content-between align-items-center flex-column flex-sm-row">
           <div className="col-auto">
             <div className="logo">
               <Link to="/">
@@ -20,16 +22,16 @@ const Header = () => {
           <div className="col-auto">
             <div className="row justify-content-end">
               <div className="social">
-                <Link to="/">{"info@suix.es"}</Link>
-                <Link to="/">
-                  <img src={twitter} />
-                </Link>
-                <Link to="/">
+                <a href={`mailto:${socialLinks.email}`}  target="_blank">{"info@suix.es"}</a>
+                <a href={socialLinks.linkedin} target="_blank">
                   <img src={linkedin} />
-                </Link>
-                <Link to="/">
+                </a>
+                <a href={socialLinks.medium} target="_blank">
+                  <img src={medium} />
+                </a>
+                <a href={socialLinks.twitter} target="_blank">
                   <img src={twitter} />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
+import { about } from "../../utils/constants";
 import { iconArrow } from "../../assets/index";
-import Contact from "../Contact/index";
 
 class AboutPage extends React.Component {
   public render() {
@@ -11,14 +11,28 @@ class AboutPage extends React.Component {
         <section className="b-about">
           <div className="container">
             <div className="row">
-              <Link className="anchornav" to="/">
-                <img src={iconArrow} />
-                Home
-              </Link>
+              <div className="col-12">
+                <h1>10 real facts about me</h1>
+                {about.map(item => (
+                  <div
+                    key={item.title}
+                    className="b-about__item d-flex flex-column align-items-center"
+                  >
+                    <h2>{item.title}</h2>
+                    <img src={item.img} />
+                    <div className="subtitle">
+                      <p>{item.subtitle}</p>
+                    </div>
+                  </div>
+                ))}
+                <Link className="anchornav" to="/">
+                  <img src={iconArrow} />
+                  Home
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-        <Contact />
       </div>
     );
   }

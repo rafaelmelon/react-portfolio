@@ -11,10 +11,7 @@ class Portfolio extends React.Component<PortfolioProps> {
       <section className="b-worklist">
         {this.props.portfolio.map(item => (
           <Link key={item.id} to={`/${item.id}`} className="item">
-            <div>
-              <small>{item.type}</small>
-              <h3>{item.title}</h3>
-            </div>
+            <h3>{item.title}</h3>
             <img alt={item.title} src={item.image} />
           </Link>
         ))}

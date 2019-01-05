@@ -1,15 +1,22 @@
 .b-nav {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
+  margin-bottom: 80px;
   .logo {
     a {
       img {
         width: 160px;
       }
     }
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
   }
   .social {
     a {
-      margin-left: 20px;
+      margin: 0 0 0 20px;
+      @media (max-width: 576px) {
+        margin: 0 10px;
+      }
       img {
         width: 30px;
       }

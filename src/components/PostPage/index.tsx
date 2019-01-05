@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { iconArrow } from "../../assets/index";
 import { API, APIRSS, USER } from "../../utils/index";
-import Contact from "../Contact/index";
 
 interface PostPageProps {
   portfolio: any[];
@@ -58,16 +57,17 @@ class PostPage extends React.Component<PostPageProps, PostPageState> {
         <section className="b-work">
           <div className="container">
             <div className="row">
-              <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: post.description }} />
-              <Link className="anchornav" to="/">
-                <img src={iconArrow} />
-                Home
-              </Link>
+              <div className="col-12">
+                <h1>{post.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: post.description }} />
+                <Link className="anchornav" to="/">
+                  <img src={iconArrow} />
+                  Home
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-        <Contact />
       </div>
     );
   }
